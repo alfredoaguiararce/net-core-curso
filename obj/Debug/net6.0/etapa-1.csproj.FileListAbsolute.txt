@@ -1,0 +1,15 @@
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\bin\Debug\net6.0\etapa-1.exe
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\bin\Debug\net6.0\etapa-1.deps.json
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\bin\Debug\net6.0\etapa-1.runtimeconfig.json
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\bin\Debug\net6.0\etapa-1.dll
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\bin\Debug\net6.0\etapa-1.pdb
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.csproj.AssemblyReference.cache
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.AssemblyInfoInputs.cache
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.AssemblyInfo.cs
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.csproj.CoreCompileInputs.cache
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.dll
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\refint\etapa-1.dll
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.pdb
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\etapa-1.genruntimeconfig.cache
+C:\Users\52324\Documents\c-sharp\netcore\etapa-1\obj\Debug\net6.0\ref\etapa-1.dll

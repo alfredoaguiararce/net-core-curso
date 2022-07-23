@@ -6,101 +6,58 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var escuela = new Escuela(nombre: "Academia", 2012, "Mexico", "Nayarit");
-        escuela.TipoEscuela = TiposEscuela.Secundaria;
-        Console.WriteLine(escuela);
-
-        var curso_1 = new Curso()
-        {
-            Nombre = " 101"
-        };
-        var curso_3 = new Curso()
-        {
-            Nombre = " 102"
-        };
-        var curso_2 = new Curso()
-        {
-            Nombre = " 301"
-        };
-
-        var arregloCursos = new Curso[3];
-        arregloCursos[0] = curso_1;
-        arregloCursos[1] = curso_2;
-        arregloCursos[2] = curso_3;
-
-
-        System.Console.WriteLine("=============");
-        System.Console.WriteLine(curso_1.Nombre + " , " + curso_1.UniqueId);
-        System.Console.WriteLine(curso_2.Nombre + " , " + curso_2.UniqueId);
-        System.Console.WriteLine(curso_3.Nombre + " , " + curso_3.UniqueId);
-
-        // ImprimirCursos(arregloCursos);
-
-
-        var escuela_ = new Escuela("Platzi Academy", 2012, TiposEscuela.Primaria,
+       var escuela = new Escuela("Platzi Academy", 2012, TiposEscuela.Primaria,
                         ciudad: "Bogotá", pais: "Colombia"
                         );
 
-        escuela_.Cursos = new Curso[]{
-                    new Curso(){ Nombre = "101"},
-                    new Curso() {Nombre = "201"},
-                    new Curso{Nombre = "301"}
+        escuela.Cursos = new List<Curso>()
+        {
+            new Curso(){ Nombre = "101", Jornada = TiposJornada.Mañana },
+            new Curso() {Nombre = "201", Jornada = TiposJornada.Mañana},
+            new Curso{Nombre = "301", Jornada = TiposJornada.Mañana}
         };
 
+        escuela.Cursos.Add(new Curso { Nombre = "102", Jornada = TiposJornada.Tarde });
+        escuela.Cursos.Add(new Curso { Nombre = "202", Jornada = TiposJornada.Tarde });
 
-        bool rta = 10 == 10;//true
-            int cantidad = 10;
+        var otrColeccion = new List<Curso>()
+        {
+            new Curso(){ Nombre = "401", Jornada = TiposJornada.Mañana },
+            new Curso() {Nombre = "501", Jornada = TiposJornada.Mañana},
+            new Curso{Nombre = "501", Jornada = TiposJornada.Tarde}
+        };
 
-            if (rta == false)
-            {
-                WriteLine("Se cumplio la condición #1");
-            }
-            else if (cantidad > 15)
-            {
-                WriteLine("Se cumplio la condición #2");
-            }
-            else
-            {
-                WriteLine("NO Se cumplio la condición");
-            }
+        escuela.Cursos.AddRange(otrColeccion);
+        ImpimirCursosEscuela(escuela);
 
-            if(cantidad > 5 && rta == false)
-            {
-                WriteLine("Se cumplio la condición #3");
-            }
+        escuela.Cursos.RemoveAll(delegate (Curso cur)
+                                {
+                                    return cur.Nombre == "301";
+                                });
 
-            
-            if(cantidad > 5 && rta )
-            {
-                WriteLine("Se cumplio la condición #4");
-            }
-
-            cantidad = 10;
-            if(
-                (cantidad > 15 || !rta) 
-                && (cantidad % 5 == 0 )
-            )
-            {
-                WriteLine("Se cumplio la condición #5");
-            }
-
+        escuela.Cursos.RemoveAll((cur)=> cur.Nombre == "501" && cur.Jornada == TiposJornada.Mañana );
+        
+        WriteLine("==================");
+        ImpimirCursosEscuela(escuela);
 
     }
 
-    // private static void ImprimirCursos(Curso[] arregloCursos)
-    // {
-    //         WriteLine("====================");
-    //         WriteLine("Cursos de la Escuela");
-    //         WriteLine("====================");
+    private static void ImpimirCursosEscuela(Escuela escuela)
+    {
+        WriteLine("====================");
+        WriteLine("Cursos de la Escuela");
+        WriteLine("====================");
 
-    //         if (escuela?.Cursos != null)
-    //         {
-    //             foreach (var curso in escuela.Cursos)
-    //             {
-    //                 WriteLine($"Nombre {curso.Nombre  }, Id  {curso.UniqueId}");
-    //             }
-    //         }
-    // }
+        if (escuela?.Cursos != null)
+        {
+            foreach (var curso in escuela.Cursos)
+            {
+                WriteLine($"Nombre {curso.Nombre  }, Id  {curso.UniqueId}");
+            }
+        }
+    }
+
+
 
     private static void ImprimirCursosWhile(Curso[] arregloCursos)
     {
